@@ -1,0 +1,39 @@
+<div class="container">
+    <h1 class="titleSection mt-4">Our list of assets</h1>
+    <div class="row justify-content-md-center">
+      <div *ngFor="let asset of assets" class="col-md-auto">
+        <div  class="card m-1 cardShadow" style="width: 18rem;" >
+            
+            <div class="card-body">
+              <h5 class="card-title title">{{asset.asset_name}} <small>({{asset.id}})</small></h5>
+              <div class="center">
+                <img [src]="asset.img" onError="this.src='https://trade.globalblock.co.uk/images/generic.svg'">
+              </div>
+              
+              <div class="center mt-2"><button mat-raised-button color="primary">See this asset in-depth</button></div>
+              
+              <br>
+              <div class="adjustBadges">
+                <span class="badge bg-success m-1" *ngIf="asset.can_deposit">Deposit</span>
+              <span class="badge bg-danger m-1" *ngIf="!asset.can_deposit">Deposit</span>
+              <span class="badge bg-success m-1" *ngIf="asset.can_deposit">Withdraw</span>
+              <span class="badge bg-danger m-1" *ngIf="!asset.can_deposit">Withdraw</span>
+              </div>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col-md-auto">
+        <mat-progress-spinner *ngIf="loading" color="primary" mode="indeterminate"></mat-progress-spinner>
+    </div>
+  </div>
+  
+
+
+
+
+
