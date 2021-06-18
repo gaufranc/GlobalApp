@@ -1,1 +1,34 @@
-<p>asset-view works!</p>
+<div class="container">
+    <h1 class="titleSection mt-4">{{asset.asset_name}}</h1>
+    <div class="row justify-content-center ">
+      <div *ngFor="let instrument of this.dataService.activeInstruments" class="col-auto">
+         
+        <div  class="card m-3 cardShadow" style="width: 18rem;" >
+            
+            <div class="card-body">
+              <h5 class="card-title title">{{instrument}} <small>({{instrument}})</small></h5>
+              
+              
+              <div style="display: block;">
+                <canvas baseChart width="400" height="400"
+                  [datasets]="lineChartData"
+                  [labels]="lineChartLabels"
+                  [options]="lineChartOptions"
+                  [colors]="lineChartColors"
+                  [legend]="lineChartLegend"
+                  [chartType]="lineChartType"
+                  [plugins]="lineChartPlugins">
+                </canvas>
+              </div>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col-md-auto">
+        <mat-progress-spinner *ngIf="loading" color="primary" mode="indeterminate"></mat-progress-spinner>
+    </div>
+  </div>

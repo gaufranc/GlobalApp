@@ -10,6 +10,7 @@ import { SharedModule } from '../shared/shared.module';
 
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { ChartsModule } from 'ng2-charts';
 import { PipesModule } from '../pipes/pipes.module';
@@ -27,7 +28,8 @@ import { PipesModule } from '../pipes/pipes.module';
     MatProgressSpinnerModule,
     ChartsModule,
     MatButtonModule,
-    PipesModule
+    PipesModule,
+    MatSnackBarModule
     
   ],
   exports: [
@@ -36,6 +38,7 @@ import { PipesModule } from '../pipes/pipes.module';
     AssetViewComponent,
     MatProgressSpinnerModule,
     MatButtonModule,
+    MatSnackBarModule
   ]
 })
 export class PagesModule { }

@@ -11,6 +11,9 @@ export class DataServiceService {
   tenDaysAgo;
   todayDate: Date;
   tenDaysAgoFinal: string;
+  instruments:any = [];
+  public activeInstruments: string[] = [];
+  public activeAsset: Asset = {} as Asset;
   
   constructor(private http: HttpClient) { 
 
@@ -18,11 +21,12 @@ export class DataServiceService {
     this.todayDate = new Date();
     this.tenDaysAgo = Number(this.todayDate) - 1000 * 60 * 60 * 24 * 10; 
     this.tenDaysAgoFinal = new Date(this.tenDaysAgo).toISOString().slice(0, 10);
+    this.getInstruments();
 
+    
    }
 
   assets: Asset[] = [];
-  instruments: string[] = [];
   
 
   
@@ -37,9 +41,11 @@ export class DataServiceService {
   }
 
   getInstruments(){
-    return this.http.get('https://trade.globalblock.co.uk/marketdata/instruments')
+    this.http.get('https://trade.globalblock.co.uk/marketdata/instruments').subscribe((resp:any) => {
+      this.instruments = resp;
+    })
   }
-  getInstrumentsData(instrument: string){
+  getInstrumentData(instrument: string){
     return this.http.get(`https://trade.globalblock.co.uk/marketdata/instruments/${instrument}/history?startDate=${this.tenDaysAgoFinal}&endDate=${this.today}&type=1d`)
   }
 

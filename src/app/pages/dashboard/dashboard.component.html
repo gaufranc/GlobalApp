@@ -11,7 +11,7 @@
                 <img [src]="asset.img" onError="this.src='https://trade.globalblock.co.uk/images/generic.svg'">
               </div>
               
-              <div class="center mt-2"><button mat-raised-button color="primary">See this asset in-depth</button></div>
+              <div class="center mt-2"><button mat-raised-button color="primary" (click)="inDepth(asset)">See this asset in-depth</button></div>
               
               <br>
               <div class="adjustBadges">

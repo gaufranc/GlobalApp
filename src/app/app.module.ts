@@ -13,12 +13,14 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { AuthModule } from './auth/auth.module';
 import { PagesModule } from './pages/pages.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LinearGraphComponent } from './components/linear-graph/linear-graph.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NopagefoundComponent,
+    LinearGraphComponent,
   ],
   imports: [
     BrowserModule,
