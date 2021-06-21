@@ -45,16 +45,15 @@ export class DashboardComponent implements OnInit {
     console.log(asset);
     this.dataService.activeInstruments = [];
     this.dataService.activeAsset = {} as Asset;
-      this.dataService.instruments.forEach((instrument:any) => {
-        if(instrument.includes(asset.id)){
-          this.dataService.activeInstruments.push(instrument)
-          this.dataService.activeAsset = asset;
-          this.router.navigateByUrl(`/dashboard/asset/${asset.id}`)
-        }
-        if(!instrument.includes(asset.id)){
-          this.snackBar.open(`We're sorry! This asset is not working at the moment`, 'Dismiss')
-        }
-      });
-    console.log(this.dataService.activeInstruments);
+    this.dataService.instruments.forEach((instrument:any) => {
+      if(instrument.includes(asset.id)){
+        this.dataService.activeInstruments.push(instrument)
+        this.dataService.activeAsset = asset;
+        this.router.navigateByUrl(`/dashboard/asset/${asset.id}`)
+      }
+    });
+    if(this.dataService.activeInstruments.length === 0){
+      this.snackBar.open(`We're sorry! This asset is not working at the moment`, 'Dismiss')
+    }
   }
 }
