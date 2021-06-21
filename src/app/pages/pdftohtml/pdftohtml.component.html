@@ -1,0 +1,208 @@
+<div class="container background" >
+    <button mat-raised-button  id="toggle-linear">
+        
+      </button>
+      <mat-horizontal-stepper [linear]="" #stepper>
+        <mat-step >
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <h1>Choose Your Crypto</h1>
+                </div>
+                
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-auto">
+                    <div class="assetBox">
+                        <div class="alignMiddle">
+                            <img src="https://trade.globalblock.co.uk/images/btc.svg" class="iconDetails" alt="">
+                            
+                        </div>
+                        <div class="alignMiddle m-2">
+                            <h2>Bitcoin</h2>
+                        </div>
+                        </div>
+                   
+                </div>
+                <div class="col-auto">
+                    <div class="assetBox">
+                        <div class="alignMiddle">
+                            <img src="https://trade.globalblock.co.uk/images/eth.svg" class="iconDetails" alt="">
+                            
+                        </div>
+                        <div class="alignMiddle m-2">
+                            <h2>Ethereum</h2>
+                        </div>
+                        </div>
+                   
+                </div>
+                
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-auto">
+                    <div class="assetBox">
+                        <div class="alignMiddle">
+                            <img src="https://trade.globalblock.co.uk/images/bch.svg" class="iconDetails" alt="">
+                            
+                        </div>
+                        <div class="alignMiddle m-2">
+                            <h2>Bitcoin Cash</h2>
+                        </div>
+                        </div>
+                   
+                </div>
+                <div class="col-auto">
+                    <div class="assetBox">
+                        <div class="alignMiddle">
+                            <img src="https://trade.globalblock.co.uk/images/ltc.svg" class="iconDetails" alt="">
+                            
+                        </div>
+                        <div class="alignMiddle m-2">
+                            <h2>Litecoin</h2>
+                        </div>
+                        </div>
+                   
+                </div>
+                
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-auto">
+                    <div class="assetBox">
+                        <div class="alignMiddle">
+                            <img src="https://trade.globalblock.co.uk/images/doge.svg" class="iconDetails" alt="">
+                            
+                        </div>
+                        <div class="alignMiddle m-2">
+                            <h2>Dogecoin</h2>
+                        </div>
+                        </div>
+                   
+                </div>
+                <div class="col-auto">
+                    <div class="assetBox">
+                        <div class="alignMiddle">
+                            <img src="https://trade.globalblock.co.uk/images/usdt.svg" class="iconDetails" alt="">
+                            
+                        </div>
+                        <div class="alignMiddle m-2">
+                            <h2>Tether</h2>
+                        </div>
+                        </div>
+                   
+                </div>
+                
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto mt-5">
+                    <h1>Choose The Amount</h1>
+                </div>
+                    <div class="row justify-content-center mt-4">
+                    <div class="col-auto">
+                        <div class="amountBox">
+                            
+                            <div class="alignMiddle m-2">
+                                <h2>£50</h2>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="col-auto">
+                        <div class="amountBox">
+                            
+                            <div class="alignMiddle">
+                                <h2>£100</h2>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="col-auto">
+                        <div class="amountBox">
+                            
+                            <div class="alignMiddle m-2">
+                                <h2>£200</h2>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="col-auto">
+                        <div class="amountBox">
+                            <div class="alignMiddle m-2">
+                                <h2>£500</h2>
+                            </div>
+                        </div>
+                       
+                    </div>
+                
+                </div>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-auto">
+                        <div class="amountBox">
+                            
+                            <div class="alignMiddle m-2">
+                                <h2>£1000</h2>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="col-auto">
+                        <div class="amountBox">
+                            
+                            <div class="alignMiddle">
+                                <h2>£1500</h2>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="col-auto">
+                        <div class="amountBox">
+                            
+                            <div class="alignMiddle m-2">
+                                <h2>£2000</h2>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="col-auto">
+                        <div class="amountBox">
+                            <div class="alignMiddle m-2">
+                                <h2>£2500</h2>
+                            </div>
+                        </div>
+                       
+                    </div>
+                
+                </div>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-auto">
+                        <button mat-button color="primary" class="buttonPdf">
+                            Next
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          
+        </mat-step>
+        <mat-step  label="Fill out your address">
+          <form >
+            
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </div>

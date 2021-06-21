@@ -4,6 +4,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from '../guards/auth.guard';
 import { AssetViewComponent } from './asset-view/asset-view.component';
+import { PdftohtmlComponent } from './pdftohtml/pdftohtml.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
         { path: '', component: DashboardComponent, data: {titulo: 'Dashboard'}},
+        { path: 'pdftohtml', component: PdftohtmlComponent, data: {titulo: 'PDF to HTML'}},
         { path: 'asset/:id', component: AssetViewComponent, data: {titulo: 'Asset View'}},
     ]
     }

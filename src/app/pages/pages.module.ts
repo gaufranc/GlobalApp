@@ -15,12 +15,16 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ChartsModule } from 'ng2-charts';
 import { PipesModule } from '../pipes/pipes.module';
 import { ComponentsModule } from '../components/components.module';
+import { PdftohtmlComponent } from './pdftohtml/pdftohtml.component';
+
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     AssetViewComponent,
-    PagesComponent
+    PagesComponent,
+    PdftohtmlComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +35,8 @@ import { ComponentsModule } from '../components/components.module';
     MatButtonModule,
     PipesModule,
     MatSnackBarModule,
-    ComponentsModule
+    ComponentsModule,
+    MatStepperModule
     
   ],
   exports: [
@@ -40,7 +45,8 @@ import { ComponentsModule } from '../components/components.module';
     AssetViewComponent,
     MatProgressSpinnerModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatStepperModule
   ]
 })
 export class PagesModule { }
