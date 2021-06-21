@@ -42,7 +42,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
   inDepth(asset: Asset){
-    console.log(asset);
     this.dataService.activeInstruments = [];
     this.dataService.activeAsset = {} as Asset;
     this.dataService.instruments.forEach((instrument:any) => {

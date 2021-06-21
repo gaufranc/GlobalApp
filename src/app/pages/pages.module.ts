@@ -14,6 +14,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { ChartsModule } from 'ng2-charts';
 import { PipesModule } from '../pipes/pipes.module';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PipesModule } from '../pipes/pipes.module';
     ChartsModule,
     MatButtonModule,
     PipesModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ComponentsModule
     
   ],
   exports: [
